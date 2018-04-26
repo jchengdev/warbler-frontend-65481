@@ -5,7 +5,7 @@
   },
   "proxies": {
     "/api": {
-      "origin": "https://shrouded-coast-42652.herokuapp.com/api"
+      "origin": "https://arcane-sea-68404.herokuapp.com/api"
     }
   }
 }
