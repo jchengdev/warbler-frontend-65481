@@ -24,7 +24,7 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route exact path="/about" render={_props => <AboutPage {..._props} />} />
+        <Route path="/about" render={_props => <AboutPage {..._props} />} />
         <Route render={_props => <AppWrapped {..._props} /> } />
       </Switch>
     </Router>
