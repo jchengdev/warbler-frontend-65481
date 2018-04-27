@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
 import { configureStore } from './../store';
-import Navbar from './Navbar';
-import Main from './Main';
 import { setAuthorizationToken, setCurrentUser } from '../store/actions/auth';
+import AboutPage from './../components/AboutPage';
+import AppWrapped from './AppWrapped';
 
 const store = configureStore();
 
@@ -23,10 +23,10 @@ if (localStorage.jwtToken) {
 const App = () => (
   <Provider store={store}>
     <Router>
-      <div className="onboarding">
-        <Navbar />
-        <Main />
-      </div>
+      <Switch>
+        <Route exact path="/about" render={_props => <AboutPage {..._props} />} />
+        <Route path="/" render={_props => <AppWrapped {..._props} /> } />
+      </Switch>
     </Router>
   </Provider>
 );
