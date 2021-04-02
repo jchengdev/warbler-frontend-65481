@@ -15,7 +15,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0"
   },
-  "proxy": "http://arcane-sea-68404.herokuapp.com",
+  "proxy": "http://pacific-fortress-47472.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
